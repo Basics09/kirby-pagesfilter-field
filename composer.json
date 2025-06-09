@@ -1,0 +1,71 @@
+{
+	"name": "basics09/kirby-pagesfilter-field",
+	"type": "kirby-plugin",
+	"version": "1.0.0",
+	"description": "Apply filter query for all subpages in Kirbys pages field",
+	"license": "MIT",
+	"homepage": "https://github.com/",
+	"authors": [
+		{
+			"name": "Ove Numrich",
+			"email": "ove@basics09.de"
+		}
+	],
+	"keywords": [
+		"kirby",
+		"kirby-cms",
+		"kirby-plugin"
+	],
+	"autoload": {
+		"psr-4": {
+			"Basics09\\": "lib"
+		}
+	},
+	"autoload-dev": {
+		"psr-4": {
+			"Tests\\": "tests/"
+		}
+	},
+	"config": {
+		"allow-plugins": {
+			"getkirby/composer-installer": true,
+			"pestphp/pest-plugin": true,
+			"php-http/discovery": true
+		},
+		"optimize-autoloader": true,
+		"sort-packages": true
+	},
+	"require": {
+		"php": ">=8.2",
+		"getkirby/cms": "^4.3.1 || ^5.0",
+		"getkirby/composer-installer": "^1.1"
+	},
+	"require-dev": {
+		"pestphp/pest": "^v3.5.1",
+		"getkirby/cli": "^1.5",
+		"friendsofphp/php-cs-fixer": "^3.75",
+		"rector/rector": "^2.0"
+	},
+	"minimum-stability": "RC",
+	"scripts": {
+		"stan": "./vendor/bin/phpstan",
+		"fix": "./vendor/bin/php-cs-fixer fix",
+		"test": "./vendor/bin/pest",
+		"rector": "./vendor/bin/rector",
+		"dist": [
+			"composer fix",
+			"composer install --no-dev --optimize-autoloader",
+			"git rm -rf --cached .; git add .;"
+		],
+		"kirby": [
+			"composer install",
+			"composer update",
+			"composer install --working-dir=tests/kirby --no-dev --optimize-autoloader",
+			"composer update --working-dir=tests/kirby"
+		]
+	},
+	"extra": {
+		"installer-name": "pagesfilter",
+		"kirby-cms-path": "tests/kirby"
+	}
+}

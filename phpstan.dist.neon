@@ -1,0 +1,10 @@
+parameters:
+    level: 9
+    paths:
+        - lib
+        - index.php
+    excludePaths:
+        - tests
+
+    ignoreErrors:
+        - '#Undefined variable: \$this#'

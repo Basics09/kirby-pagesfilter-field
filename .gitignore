@@ -1,0 +1,12 @@
+.DS_Store
+.idea
+*.cache
+
+# Tests
+/tests/kirby
+/tests/vendor
+
+# Vendor
+/vendor
+
+.php-cs-fixer.cache

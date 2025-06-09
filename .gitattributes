@@ -1,0 +1,8 @@
+# Ignore dot files
+/.*                  export-ignore
+
+/phpstan.dist.neon   export-ignore
+
+/tests               export-ignore
+/phpunit.xml				 export-ignore
+/rector.php					 export-ignore
