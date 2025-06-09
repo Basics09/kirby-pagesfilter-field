@@ -12,17 +12,11 @@ When building navigation menus, you often need to exclude certain pages (like pa
 
 ## Installation
 
-### Via Composer (Recommended)
+### Via Composer
 
 ```bash
 composer require basics09/kirby-pagesfilter-field
 ```
-
-### Manual Installation
-
-1. Download the plugin files
-2. Copy the plugin folder to `site/plugins/kirby-pagesfilter`
-3. Make sure the plugin is loaded in your Kirby installation
 
 ## Requirements
 
